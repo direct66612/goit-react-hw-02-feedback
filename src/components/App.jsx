@@ -21,13 +21,7 @@ class App extends Component {
     );
   }
   countPositiveFeedbackPercentage() {
-    if (
-      isNaN(Math.round((this.state.good / this.countTotalFeedback()) * 100))
-    ) {
-      return '0';
-    } else {
-      return Math.round((this.state.good / this.countTotalFeedback()) * 100);
-    }
+    return Math.round((this.state.good / this.countTotalFeedback()) * 100);
   }
   render() {
     return (
